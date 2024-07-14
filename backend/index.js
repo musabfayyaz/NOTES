@@ -7,7 +7,13 @@ const cors = require('cors');
 
 dbConnect();
 app.use(express.json());
-app.use(cors());
+
+const corsOptions = {
+  origin: 'https://notes-14614ghae-musab-fayyazs-projects.vercel.app', // or 'https://notes-self-rho.vercel.app'
+  optionsSuccessStatus: 200
+};
+
+app.use(cors(corsOptions));
 
 
 app.get('/', async (req, res) => {
