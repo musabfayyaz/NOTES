@@ -7,7 +7,22 @@ const cors = require('cors');
 
 dbConnect();
 app.use(express.json());
-app.use(cors());
+
+// Configure CORS to allow requests from your frontend domain
+const allowedOrigins = ['https://notes-self-rho.vercel.app'];
+
+const corsOptions = {
+  origin: function (origin, callback) {
+    // Check if the request origin is in the allowedOrigins array
+    if (allowedOrigins.indexOf(origin) !== -1 || !origin) {
+      callback(null, true);
+    } else {
+      callback(new Error('Not allowed by CORS'));
+    }
+  }
+};
+
+app.use(cors(corsOptions));
 
 
 app.get('/', async (req, res) => {
