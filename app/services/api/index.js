@@ -1,7 +1,7 @@
 import axios from "axios"
 
 const notesAPI = axios.create({
-    baseURL: "https://notes-73s8zlhnq-musab-fayyazs-projects.vercel.app/api"
+    baseURL: "https://backend-delta-beige.vercel.app/api"
 })
 
 export default notesAPI
