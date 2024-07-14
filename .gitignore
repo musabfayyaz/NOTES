@@ -2,6 +2,7 @@
 
 # dependencies
 /node_modules
+/backend/node_modules
 /.pnp
 .pnp.js
 .yarn/install-state.gz
@@ -35,6 +36,6 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
-# backend
-/backend/note_modules
+
+
 
