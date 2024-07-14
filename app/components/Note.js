@@ -6,7 +6,7 @@ import notesAPI from "../services/api";
 const Note = ({note, setNotes }) => {
   const deleteHandler = async (note) => {
      const id = note._id
-    await notesApi.delete(`/notes/${id}`);
+    await notesAPI.delete(`/notes/${id}`);
     setNotes((prevNotes) => prevNotes.filter((n) => n._id !== id));
 
   }
