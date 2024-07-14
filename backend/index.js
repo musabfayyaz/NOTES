@@ -9,7 +9,7 @@ dbConnect();
 app.use(express.json());
 
 // Configure CORS to allow requests from your frontend domain
-const allowedOrigins = ['https://notes-self-rho.vercel.app'];
+const allowedOrigins = ['https://notes-mt6cxvtfw-musab-fayyazs-projects.vercel.app/'];
 
 const corsOptions = {
   origin: function (origin, callback) {
