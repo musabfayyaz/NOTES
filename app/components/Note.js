@@ -1,11 +1,12 @@
 "use client";
 import axios from "axios";
 import React from "react";
+import notesAPI from "../services/api";
 
 const Note = ({note, setNotes }) => {
   const deleteHandler = async (note) => {
      const id = note._id
-    await axios.delete(`http://localhost:3001/api/notes/${id}`);
+    await notesAPI.delete(`/notes/${id}`);
     setNotes((prevNotes) => prevNotes.filter((n) => n._id !== id));
 
   }
